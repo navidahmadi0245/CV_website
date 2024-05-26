@@ -7,4 +7,4 @@ def blog_view(requst):
 
 
 def single_view(requst):
-    return render(requst, "blog/single.html")
+    return render(requst, "blog/single-blog.html")

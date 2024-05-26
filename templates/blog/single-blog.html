@@ -1,33 +1,34 @@
+{% load static %}
 <!doctype html>
 <html lang="fa">
     <head>
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="icon" href="img/favicon.png" type="image/png">
+        <link rel="icon" href="{% static 'img//favicon.png' %}" type="image/png">
         <title>قالب رایگان MeetMe :: فارسی و راست چین شده توسط وب روبیک</title>
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="css/bootstrap-rtl.min.css">
-        <link rel="stylesheet" href="vendors/linericon/style.css">
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-        <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
-        <link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css">
-        <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
-        <link rel="stylesheet" href="vendors/animate-css/animate.css">
-        <link rel="stylesheet" href="vendors/popup/magnific-popup.css">
+        <link rel="stylesheet" href="{% static 'css//bootstrap-rtl.min.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors//linericon/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css//font-awesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors//owl-carousel/owl.carousel.min.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors//lightbox/simpleLightbox.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors//nice-select/css/nice-select.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors//animate-css/animate.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors//popup/magnific-popup.css' %}">
         <!-- main css -->
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="{% static 'css//style.css' %}">
+        <link rel="stylesheet" href="{% static 'css//responsive.css' %}">
     </head>
     <body>
-        
+
         <!--================Header Menu Area =================-->
         <header class="header_area">
             <div class="main_menu">
             	<nav class="navbar navbar-expand-lg navbar-light">
 					<div class="container box_1620">
 						<!-- Brand and toggle get grouped for better mobile display -->
-						<b><a class="navbar-brand " href="index.html" style="color: white;">آشناشو</a></b>
+						<b><a class="navbar-brand " href="{% url 'website:index'  %}" style="color: white;">آشناشو</a></b>
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
@@ -36,32 +37,32 @@
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse offset" id="navbarSupportedContent" >
 							<ul class="nav navbar-nav menu_nav mr-auto"  >
-								<li class="nav-item active"><a class="nav-link" href="index.html">خانه</a></li> 
-								<li class="nav-item"><a class="nav-link" href="about-us.html">درباره ما</a></li> 
-								<li class="nav-item"><a class="nav-link" href="services.html">خدمات</a></li> 
+								<li class="nav-item active"><a class="nav-link" href="{% url 'website:index'  %}">خانه</a></li>
+								<li class="nav-item"><a class="nav-link" href="{% url 'website:about'  %}">درباره ما</a></li>
+								<li class="nav-item"><a class="nav-link" href="services.html">خدمات</a></li>
 								<li class="nav-item submenu dropdown">
 									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">صفحه ها</a>
 									<ul class="dropdown-menu">
 										<li class="nav-item"><a class="nav-link txt-alg-hd" href="portfolio.html">پروژه ها</a></li>
 										<li class="nav-item"><a class="nav-link txt-alg-hd" href="elements.html">المانها</a></li>
 									</ul>
-								</li> 
+								</li>
 								<li class="nav-item submenu dropdown">
 									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="margin-left:30px;" >وبلاگ</a>
 									<ul class="dropdown-menu "  >
 										<li class="nav-item"><a class="nav-link txt-alg-hd" href="blog.html" >وبلاگ</a></li>
 										<li class="nav-item"><a class="nav-link txt-alg-hd" href="single-blog.html">صفحه داخلی</a></li>
 									</ul>
-								</li> 
-								<li class="nav-item"><a class="nav-link" href="contact.html"  >تماس با ما</a></li>
+								</li>
+								<li class="nav-item"><a class="nav-link" href="{% url 'website:contact'  %}"  >تماس با ما</a></li>
 							</ul>
-						</div> 
+						</div>
 					</div>
             	</nav>
             </div>
         </header>
         <!--================Header Menu Area =================-->
-        
+
         <!--================Home Banner Area =================-->
         <section class="banner_area">
             <div class="box_1620">
@@ -70,7 +71,7 @@
 						<div class="banner_content text-center">
 							<h2>جزییات وبلاگ</h2>
 							<div class="page_link">
-								<a href="index.html">خانه</a>
+								<a href="{% url 'website:index'  %}">خانه</a>
 								<a href="blog.html" style="margin-left:30px ;">وبلاگ</a>
 								<a href="single-blog.html">جزییات وبلاگ</a>
 							</div>
@@ -80,7 +81,7 @@
             </div>
         </section>
         <!--================End Home Banner Area =================-->
-        
+
         <!--================Blog Area =================-->
         <section class="blog_area single-post-area p_120">
             <div class="container">
@@ -89,8 +90,8 @@
                         <div class="single-post row">
                             <div class="col-lg-12">
                                 <div class="feature-img">
-                                    <img class="img-fluid" src="img/blog/feature-img1.jpg" alt="">
-                                </div>									
+                                    <img class="img-fluid" src="{% static 'img//blog/feature-img1.jpg' %}" alt="">
+                                </div>
                             </div>
                             <div class="col-lg-3  col-md-3">
                                 <div class="blog_info text-right">
@@ -123,35 +124,35 @@
                                     کثر ما نسبت به خود دیدگاهی داریم. ولی کمتر کسی وجود دارد که خود را به‌طور دقیق بشناسد. «خودشناسی» برای داشتن یک زندگی فوق‌العاده بسیار ضروری است. برای شناختن خود باید نگاهی دقیق به خودتان بیندازید. چیزهایی را که سال‌ها انکار کرده‌اید یا ندیده‌اید، ببینید. خودشناسی به شما کمک می‌کند تا علایق، آرزوها، ترس‌ها و چیزهایی که آرامش را از شما سلب کرده‌اند، بهتر بشناسید. این کار شاید در نگاه اول آسان به نظر بیاید، ولی به این آسانی هم نیست
                                 </p>
                                 <p>
-                                    اگر باور دارید یک زندگی زیبا برای شما وجود دارد، وقت آن است که تغییراتی در زندگی‌تان ایجاد کنید. اگر کارهای قبلی را تکرار کنید، نتایج قبلی را به‌دست می‌آورید. کمی زمان می‌برد تا بفهمید چه چیزی در زندگی‌تان کم است یا چه چیزهایی را باید از زندگی‌تان حذف کنید.برای مثال اگر می‌خواهید هدف زندگی‌تان را پیدا کنید، بهتر است به جای وقت گذراندن با افرادی که شما را به عقب می‌رانند،‌ بیشتر با افرادی وقت بگذرانید که الهام‌بخش‌تان هستند 
+                                    اگر باور دارید یک زندگی زیبا برای شما وجود دارد، وقت آن است که تغییراتی در زندگی‌تان ایجاد کنید. اگر کارهای قبلی را تکرار کنید، نتایج قبلی را به‌دست می‌آورید. کمی زمان می‌برد تا بفهمید چه چیزی در زندگی‌تان کم است یا چه چیزهایی را باید از زندگی‌تان حذف کنید.برای مثال اگر می‌خواهید هدف زندگی‌تان را پیدا کنید، بهتر است به جای وقت گذراندن با افرادی که شما را به عقب می‌رانند،‌ بیشتر با افرادی وقت بگذرانید که الهام‌بخش‌تان هستند
                                 </p>
                             </div>
                             <div class="col-lg-12">
                                 <div class="quotes">
-                                    بخشیدن بیش از اینکه باعث آسودگی خاطر دیگران شود، باعث آرامش خودتان می‌شود. بخشیدن دیگران استرس و فشاری را که بر روی‌تان قرار دارد، از بین می‌برد و به شما حس آسودگی می‌دهد. اگر اسیر خشم، کج‌خلقی و رنج‌ شوید، اینها خیلی زود شما را از داخل می‌خورند. به مرور در زندان احساسات خود اسیر می‌شوید و صدمه می‌بینید. به همین دلایل باید احساسات منفی‌تان را رها کنید و در مسیر داشتن زندگی زیبا گام بردارید.										
+                                    بخشیدن بیش از اینکه باعث آسودگی خاطر دیگران شود، باعث آرامش خودتان می‌شود. بخشیدن دیگران استرس و فشاری را که بر روی‌تان قرار دارد، از بین می‌برد و به شما حس آسودگی می‌دهد. اگر اسیر خشم، کج‌خلقی و رنج‌ شوید، اینها خیلی زود شما را از داخل می‌خورند. به مرور در زندان احساسات خود اسیر می‌شوید و صدمه می‌بینید. به همین دلایل باید احساسات منفی‌تان را رها کنید و در مسیر داشتن زندگی زیبا گام بردارید.
                                 </div>
                                 <div class="row">
                                     <div class="col-6">
-                                        <img class="img-fluid" src="img/blog/post-img1.jpg" alt="">
+                                        <img class="img-fluid" src="{% static 'img//blog/post-img1.jpg' %}" alt="">
                                     </div>
                                     <div class="col-6">
-                                        <img class="img-fluid" src="img/blog/post-img2.jpg" alt="">
-                                    </div>	
+                                        <img class="img-fluid" src="{% static 'img//blog/post-img2.jpg' %}" alt="">
+                                    </div>
                                     <div class="col-lg-12 mt-25">
                                         <p>
                                             اگر نسبت به مسائل مختلف ذهنی بسته و بدون انعطاف داشته باشید، شانس کمی برای تغییر و پیشرفت خواهید داشت، اما اگر ذهن‌تان باز و آماده‌ی پذیرفتن مسائل جدید باشد، راحت‌تر می‌توانید با مسائل و اتفاقات مختلف روبه‌رو شوید و فشار و استرس کمتری را تجربه خواهید کرد. با این طرز تفکر می‌توانید از اتفاقات پیشِ رو لذت ببرید و زندگی زیباتری را تجربه کنید.
                                         </p>
                                         <p>
                                             زندگی می‌تواند شبیه یک ترن هوایی باشد. در زندگی گاهی سربالایی و گاهی سرازیری وجود دارد. بعضی اتفاقات باعث سربلندی و شادی‌تان می‌شوند و بعضی اتفاقات احساس شکست و ناامیدی را به شما منتقل می‌کنند. وقتی که ما نسبت به دیگران و اتفاقات پیش رو انتظار بهترین‌ها را داشته باشیم.
-                                        </p>											
-                                    </div>									
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="navigation-area">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
-                                    
+
                                     <div class="arrow">
                                         <a href="#"><span class="lnr text-white lnr-arrow-right"></span></a>
                                     </div>
@@ -160,7 +161,7 @@
                                         <a href="#" style="float: left;"><h4>دنیا علیزاده</h4></a>
                                     </div>
                                     <div class="thumb">
-                                        <a href="#"><img class="img-fluid" src="img/blog/prev.jpg" alt=""></a>
+                                        <a href="#"><img class="img-fluid" src="{% static 'img//blog/prev.jpg' %}" alt=""></a>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end align-items-center" dir="ltr">
@@ -172,9 +173,9 @@
                                         <a href="#"><span class="lnr text-white lnr-arrow-left"></span></a>
                                     </div>
                                     <div class="thumb">
-                                        <a href="#"><img class="img-fluid" src="img/blog/next.jpg" alt=""></a>
-                                    </div>										
-                                </div>									
+                                        <a href="#"><img class="img-fluid" src="{% static 'img//blog/next.jpg' %}" alt=""></a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="comments-area" >
@@ -183,7 +184,7 @@
                                 <div class="single-comment justify-content-between d-flex">
                                     <div class="user justify-content-between d-flex">
                                         <div class="thumb cm-padd">
-                                            <img src="img/blog/c1.jpg" alt="">
+                                            <img src="{% static 'img//blog/c1.jpg' %}" alt="">
                                         </div>
                                         <div class="desc">
                                             <h5><a href="#">مینا عابدی</a></h5>
@@ -194,15 +195,15 @@
                                         </div>
                                     </div>
                                     <div class="reply-btn">
-                                           <a href="" class="btn-reply text-uppercase" style="text-align: left;">پاسخ</a> 
+                                           <a href="" class="btn-reply text-uppercase" style="text-align: left;">پاسخ</a>
                                     </div>
                                 </div>
-                            </div>	
+                            </div>
                             <div class="comment-list ">
                                 <div class="single-comment justify-content-between d-flex">
                                     <div class="user justify-content-between d-flex">
                                         <div class="thumb cm-padd">
-                                            <img src="img/blog/c2.jpg" alt="">
+                                            <img src="{% static 'img//blog/c2.jpg' %}" alt="">
                                         </div>
                                         <div class="desc">
                                             <h5><a href="#">احمد محمدی</a></h5>
@@ -213,15 +214,15 @@
                                         </div>
                                     </div>
                                     <div class="reply-btn">
-                                           <a href="" class="btn-reply text-uppercase" style="text-align: left;" >پاسخ</a> 
+                                           <a href="" class="btn-reply text-uppercase" style="text-align: left;" >پاسخ</a>
                                     </div>
                                 </div>
-                            </div>	
+                            </div>
                             <div class="comment-list">
                                 <div class="single-comment justify-content-between d-flex">
                                     <div class="user justify-content-between d-flex">
                                         <div class="thumb cm-padd">
-                                            <img src="img/blog/c3.jpg" alt="">
+                                            <img src="{% static 'img//blog/c3.jpg' %}" alt="">
                                         </div>
                                         <div class="desc">
                                             <h5><a href="#">زهرا فاخر</a></h5>
@@ -232,15 +233,15 @@
                                         </div>
                                     </div>
                                     <div class="reply-btn">
-                                           <a href="" class="btn-reply text-uppercase" style="text-align: left;">پاسخ</a> 
+                                           <a href="" class="btn-reply text-uppercase" style="text-align: left;">پاسخ</a>
                                     </div>
                                 </div>
-                            </div>	
+                            </div>
                             <div class="comment-list">
                                 <div class="single-comment justify-content-between d-flex">
                                     <div class="user justify-content-between d-flex">
                                         <div class="thumb cm-padd">
-                                            <img src="img/blog/c4.jpg" alt="">
+                                            <img src="{% static 'img//blog/c4.jpg' %}" alt="">
                                         </div>
                                         <div class="desc">
                                             <h5><a href="#">غزل رنجبر</a></h5>
@@ -251,15 +252,15 @@
                                         </div>
                                     </div>
                                     <div class="reply-btn">
-                                           <a href="" class="btn-reply text-uppercase" style="text-align:left ;">پاسخ</a> 
+                                           <a href="" class="btn-reply text-uppercase" style="text-align:left ;">پاسخ</a>
                                     </div>
                                 </div>
-                            </div>	
+                            </div>
                             <div class="comment-list">
                                 <div class="single-comment justify-content-between d-flex">
                                     <div class="user justify-content-between d-flex">
                                         <div class="thumb cm-padd">
-                                            <img src="img/blog/c5.jpg" alt="">
+                                            <img src="{% static 'img//blog/c5.jpg' %}" alt="">
                                         </div>
                                         <div class="desc" >
                                             <h5><a href="#">رضا فاخر</a></h5>
@@ -270,10 +271,10 @@
                                         </div>
                                     </div>
                                     <div class="reply-btn">
-                                           <a href="" class="btn-reply text-uppercase" style="float: left;">پاسخ</a> 
+                                           <a href="" class="btn-reply text-uppercase" style="float: left;">پاسخ</a>
                                     </div>
                                 </div>
-                            </div>	                                             				
+                            </div>
                         </div>
                         <div class="comment-form">
                             <h4>ثبت بازخورد</h4>
@@ -283,8 +284,8 @@
                                     <input type="text" class="form-control" id="name" placeholder="نام " onfocus="this.placeholder = ''" onblur="this.placeholder = 'نام را وارد کنید'">
                                   </div>
                                   <div class="form-group col-lg-6 col-md-6 email" >
-                                    <input type="email" class="form-control" id="email" placeholder="ایمیل" onfocus="this.placeholder = ''" onblur="this.placeholder = 'ایمیل خود را وارد کنید'"  > 
-                                  </div>										
+                                    <input type="email" class="form-control" id="email" placeholder="ایمیل" onfocus="this.placeholder = ''" onblur="this.placeholder = 'ایمیل خود را وارد کنید'"  >
+                                  </div>
                                 </div>
                                 <div class="form-group">
                                     <input type="text" class="form-control" id="subject" placeholder="موضوع" onfocus="this.placeholder = ''" onblur="this.placeholder = 'موضوع'">
@@ -292,7 +293,7 @@
                                 <div class="form-group">
                                     <textarea class="form-control mb-10" rows="5" name="message" placeholder="متن پیام" onfocus="this.placeholder = ''" onblur="this.placeholder = 'پیام'" required=""></textarea>
                                 </div>
-                                <a href="#" class="primary-btn submit_btn">ارسال نظر</a>	
+                                <a href="#" class="primary-btn submit_btn">ارسال نظر</a>
                             </form>
                         </div>
                     </div>
@@ -308,7 +309,7 @@
                                 <div class="br"></div>
                             </aside>
                             <aside class="single_sidebar_widget author_widget">
-                                <img class="author_img rounded-circle" src="img/blog/author.png" alt="">
+                                <img class="author_img rounded-circle" src="{% static 'img//blog/author.png' %}" alt="">
                                 <h4>محمد محمدی</h4>
                                 <p>وبلاگ نویس</p>
                                 <div class="social_icon">
@@ -324,28 +325,28 @@
                         >
                                 <h3 class="widget_title">پست های محبوب</h3>
                                 <div class="media post_item">
-                                    <img src="img/blog/popular-post/post1.jpg" alt="post">
+                                    <img src="{% static 'img//blog/popular-post/post1.jpg' %}" alt="post">
                                     <div class="media-body">
                                         <a href="blog-details.html"><h3>تا کجا میشود رفت</h3></a>
                                         <p>۲ ساعت پیش</p>
                                     </div>
                                 </div>
                                 <div class="media post_item">
-                                    <img src="img/blog/popular-post/post2.jpg" alt="post">
+                                    <img src="{% static 'img//blog/popular-post/post2.jpg' %}" alt="post">
                                     <div class="media-body">
                                         <a href="blog-details.html"><h3>درآمد های ویژه</h3></a>
                                         <p>۲ ساعت پیش</p>
                                     </div>
                                 </div>
                                 <div class="media post_item">
-                                    <img src="img/blog/popular-post/post3.jpg" alt="post">
+                                    <img src="{% static 'img//blog/popular-post/post3.jpg' %}" alt="post">
                                     <div class="media-body">
                                         <a href="blog-details.html"><h3>سیاره گردی</h3></a>
                                         <p>۳ ساعت پیش</p>
                                     </div>
                                 </div>
                                 <div class="media post_item">
-                                    <img src="img/blog/popular-post/post4.jpg" alt="post">
+                                    <img src="{% static 'img//blog/popular-post/post4.jpg' %}" alt="post">
                                     <div class="media-body">
                                         <a href="blog-details.html"><h3>تلسکوپ مجازی</h3></a>
                                         <p>۱ ساعت پیش</p>
@@ -354,7 +355,7 @@
                                 <div class="br"></div>
                             </aside>
                             <aside class="single_sidebar_widget ads_widget">
-                                <a href="#"><img class="img-fluid" src="img/blog/add.jpg" alt=""></a>
+                                <a href="#"><img class="img/-fluid" src="{% static 'img//blog/add.jpg' %}" alt=""></a>
                                 <div class="br"></div>
                             </aside>
                             <aside class="single_sidebar_widget post_category_widget">
@@ -401,7 +402,7 @@
                                             <p>ماجراجویی</p>
                                             <p>۴۴</p>
                                         </a>
-                                    </li>															
+                                    </li>
                                 </ul>
                                 <div class="br"></div>
                             </aside>
@@ -419,9 +420,9 @@
                                         <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="ایمیل خود را وارد کنید" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email'">
                                     </div>
                                     <a href="#" class="bbtns">عضویت</a>
-                                </div>	
-                                <p class="text-bottom">هر وقت بخواهید میتوانید لغو عضویت کنید</p>	
-                                <div class="br"></div>							
+                                </div>
+                                <p class="text-bottom">هر وقت بخواهید میتوانید لغو عضویت کنید</p>
+                                <div class="br"></div>
                             </aside>
                             <aside class="single-sidebar-widget tag_cloud_widget">
                                 <h4 class="widget_title">تگ های ابری</h4>
@@ -446,7 +447,7 @@
             </div>
         </section>
         <!--================Blog Area =================-->
-        
+
         <!--================Footer Area =================-->
         <footer class="footer_area p_120">
         	<div class="container">
@@ -473,8 +474,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                                 <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe_form relative">
                                 	<div class="input-group d-flex flex-row"  >
                                         <input style="text-align: right!important;" name="EMAIL" placeholder="ایمیل خود را وارد نمایید" onfocus="this.placeholder = ''" onblur="this.placeholder = 'آدرس ایمیل '" required="" type="email">
-                                        <button class="btn sub-btn" dir="ltr" ><span class="lnr lnr-arrow-left"></span></button>		
-                                    </div>				
+                                        <button class="btn sub-btn" dir="ltr" ><span class="lnr lnr-arrow-left"></span></button>
+                                    </div>
                                     <div class="mt-10 info"></div>
                                 </form>
                             </div>
@@ -498,26 +499,26 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         	</div>
         </footer>
         <!--================End Footer Area =================-->
-        
-        
-        
-        
+
+
+
+
         <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="js/jquery-3.3.1.min.js"></script>
-        <script src="js/popper.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/stellar.js"></script>
-        <script src="vendors/lightbox/simpleLightbox.min.js"></script>
-        <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
-        <script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
-        <script src="vendors/isotope/isotope.pkgd.min.js"></script>
-        <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-        <script src="vendors/popup/jquery.magnific-popup.min.js"></script>
-        <script src="js/jquery.ajaxchimp.min.js"></script>
-        <script src="vendors/counter-up/jquery.waypoints.min.js"></script>
-        <script src="vendors/counter-up/jquery.counterup.min.js"></script>
-        <script src="js/mail-script.js"></script>
-        <script src="js/theme.js"></script>
+        <!-- jQuery first, then Popper.js' %}, then Bootstrap JS -->
+        <script src="{% static 'js//jquery-3.3.1.min.js' %}"></script>
+        <script src="{% static 'js//popper.js' %}"></script>
+        <script src="{% static 'js//bootstrap.min.js' %}"></script>
+        <script src="{% static 'js//stellar.js' %}"></script>
+        <script src="{% static 'vendors//lightbox/simpleLightbox.min.js' %}"></script>
+        <script src="{% static 'vendors//nice-select/js/jquery.nice-select.min.js' %}"></script>
+        <script src="{% static 'vendors//isotope/imagesloaded.pkgd.min.js' %}"></script>
+        <script src="{% static 'vendors//isotope/isotope.pkgd.min.js' %}"></script>
+        <script src="{% static 'vendors//owl-carousel/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'vendors//popup/jquery.magnific-popup.min.js' %}"></script>
+        <script src="{% static 'js//jquery.ajaxchimp.min.js' %}"></script>
+        <script src="{% static 'vendors//counter-up/jquery.waypoints.min.js' %}"></script>
+        <script src="{% static 'vendors//counter-up/jquery.counterup.min.js' %}"></script>
+        <script src="{% static 'js//mail-script.js' %}"></script>
+        <script src="{% static 'js//theme.js' %}"></script>
     </body>
 </html>
