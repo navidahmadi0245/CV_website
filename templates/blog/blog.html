@@ -123,11 +123,12 @@
                                <div class="col-md-3">
                                    <div class="blog_info text-right">
                                         <div class="post_tag">
+                                            <a href="#">{{post.category.all|join:", "}}</a>
 
                                         </div>
                                         <ul class="blog_meta list" dir="ltr">
-                                                <li><a href="#" >نوید احمدی<i class="lnr lnr-user"></i></a></li>
-                                                <li><a href="#" > {{published_date}}<i class="lnr lnr-calendar-full"></i></a></li>
+                                                <li><a href="#" >{{post.author.get_full_name}}<i class="lnr lnr-user"></i></a></li>
+                                                <li><a href="#" > {{post.published_date|date:"D d M Y"}}<i class="lnr lnr-calendar-full"></i></a></li>
                                                 <li><a href="#" >{{post.counted_view}}<i class="lnr lnr-eye"></i></a></li>
                                                 <li><a href="#" >  کامنت ۶ عدد <i class="lnr lnr-bubble"></i></a></li>
                                          </ul>
@@ -135,10 +136,10 @@
                                </div>
                                 <div class="col-md-9">
                                     <div class="blog_post">
-                                        <img src="{% static 'img//blog/main-blog/m-blog-1.jpg' %}" alt="">
+                                        <img src={{post.image.url}} alt="">
                                         <div class="blog_details">
                                             <a href="{% url 'blog:single' pid=post.id  %}"><h2>{{post.title}}</h2></a>
-                                            <p>{{post.content}}</p>
+                                            <p>{{post.content|truncatewords:20}}</p>
                                             <a href="{% url 'blog:single' pid=post.id  %}" class="white_bg_btn">View More</a>
                                         </div>
                                     </div>
